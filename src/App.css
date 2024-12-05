@@ -23,8 +23,10 @@
   border: 2px solid red;
 }
 .error-empty{
-  margin-top: 5px;
+  margin-top: 10px;
   color: red;
+  text-align: center;
+  width: 100%;
 }
 .app-wrapper {
   width: 70%;

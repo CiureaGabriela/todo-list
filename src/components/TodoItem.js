@@ -23,7 +23,7 @@ function TodoItem({todo, toggleComplete,checked, deleteTodo, id, onInputChange})
    const checkBtnClass = classNames(checkedClass, difficultyClass, 'basis-1/8 w-12 h-auto border-2  rounded mr-2')
 
     return(
-        <li className='todo-item flex  relative justify-center' id={id} style={{marginTop:'20px', textAlign:'start'}}>
+        <li className='todo-item flex flex-wrap  relative justify-center' id={id} style={{marginTop:'20px', textAlign:'start'}}>
             <input 
             checked={checked}
             type="checkbox"
