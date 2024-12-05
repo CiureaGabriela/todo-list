@@ -130,7 +130,6 @@ function TodoList() {
 
     return(
         <div>
-
             <div className="text-center w-full"> {showConfetti && <Confetti />}</div>
             <h1 className="title text-5xl mt-5 font-bold shadow-lg p-6 text-center text-blue-400">My To Do List</h1>
             <div className="app-wrapper">
