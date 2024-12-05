@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-input {
+  color: rgb(51, 139, 246);
+  font-weight: 400;
+  background: transparent;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.add-input::placeholder {
+  color: rgb(96 165 250);
+ }
+.title {
+  color: rgb(96 165 250);
+}
+.todo-item{
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.todo-item.fade-out {
+  opacity: 0;
+  transform: translateY(-20px); 
+}
+.empty {
+  border: 2px solid red;
+}
+.error-empty{
+  margin-top: 5px;
+  color: red;
+}
+.app-wrapper {
+  width: 70%;
+  margin-inline: auto;
+  @media (max-width: 768px) {
+    width: 90%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-item {
+ padding: 12px 15px;
+ min-width: 15%;
+ color: rgb(96 165 250 );
+ font-weight: 800;
 }
 
-.App-link {
-  color: #61dafb;
+
+.todo-item button {
+  min-width: fit-content;
+  padding: 20px 10px;
+ font-weight: 800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type="checkbox"]:checked{
+  background-color: rgb(96 165 250 ) 
+
+}
+label{
+  color: rgb(96 165 250 );
+  margin-bottom: 2px;
+}
+
+body {
+  height: 100vh;
+  background: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.todo-list {
+  padding: 40px 10px 100px;
+}
+* {
+  box-sizing: border-box;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+  background: none;  
+
+}
+
+.select-container{
+  position: relative;
+}
+.select-container::after {
+    content: '';
+    position: absolute;
+    top: 65%;
+    right: 18px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgb(51, 139, 246); 
+    pointer-events: none;
+  
+}
+.select-container.active::after {
+  transform: translateY(-50%) rotate(180deg); 
+}
+
+canvas{
+  margin-inline: auto;
+}
+section select{
+  @media(max-width: 576px){
+    padding: 5px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+input:hover, button:hover, select:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.02); 
+}
+
+input:focus, button:focus, select:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  outline: none; 
+}
+#difficulty {
+  padding-inline: 25px;
 }
