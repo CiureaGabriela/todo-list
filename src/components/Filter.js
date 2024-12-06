@@ -11,7 +11,7 @@ function Filter({changeArrow}){
 
     return(
        <section className="flex justify-evenly">
-        <div className="flex flex-col mr-1 select-container" value={filter} onChange={(evt)=>setFilter(evt.target.value)}>      
+        <div className="flex flex-col mr-1 select-container w-2/4  sm:w-1/4" value={filter} onChange={(evt)=>setFilter(evt.target.value)}>      
             <label className="text-sm font-bold" htmlFor="difficulty">Filter By Difficulty</label>
             <select  id="difficulty" name="difficulty" onClick={(evt)=>{changeArrow(evt.target)}} className="text-blue-400 border-solid border-2 border-blue-200 text-bold rounded-md" > 
                 <option value="all">All</option>
@@ -21,7 +21,7 @@ function Filter({changeArrow}){
             </select>
         </div>
 
-            <div className="flex flex-col ml-1 select-container" value={sort} onChange={(evt)=>setSort(evt.target.value)}>
+            <div className="flex flex-col ml-1 select-container w-2/4  sm:w-1/4" value={sort} onChange={(evt)=>setSort(evt.target.value)}>
                 <label className="text-sm font-bold" htmlFor="completed" >Filter By Status</label>
                 <select id="completed" name="completed" onClick={(evt)=>{changeArrow(evt.target)}} className="text-blue-400 border-solid border-2 border-blue-200 text-bold rounded-md">
                     <option value="all">All</option>
