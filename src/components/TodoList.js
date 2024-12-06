@@ -82,7 +82,6 @@ function TodoList() {
         selectContainer.classList.remove('active');
         });
 
-       console.log('target', target)
     }
     
     const deleteTodo = (id) => {
@@ -90,9 +89,8 @@ function TodoList() {
         if (todoElement) {
             todoElement.classList.add("fade-out");
         }
-        setTimeout(()=>{
-            setTodos(todos.filter(todo => todo.id !== id));
-        },500);
+          setTodos(todos.filter(todo => todo.id !== id));
+       
     };
 
     function setItemsLocalStorage(array){
